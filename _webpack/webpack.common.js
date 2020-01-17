@@ -7,12 +7,25 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../_dist"),
+
     filename: "[name].bundle.js"
+  },
+  devServer: {
+    contentBase: path.join(__dirname, '../_dist'),
+    compress: true,
+    port: 9000,
   },
   module: {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
