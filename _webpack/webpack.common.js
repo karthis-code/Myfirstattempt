@@ -53,7 +53,7 @@ module.exports = {
       reportFilename: path.resolve(__dirname, `../_dist/bundle.html`),
     }),
     new Visualizer({
-      filename: './visualizer.html',
+      filename: path.resolve(__dirname, `../_dist/visualizer.html`),
     }),
     new CleanWebpackPlugin(),
   ]
