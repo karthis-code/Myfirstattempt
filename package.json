@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build:client:devserver",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "build:client:dev": "webpack --config=_webpack/webpack.config.js --env=dev",
